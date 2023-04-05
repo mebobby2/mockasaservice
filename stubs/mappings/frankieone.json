@@ -2,12 +2,16 @@
   "mappings": [
     {
       "request": {
-        "method": "GET",
-        "url": "/hello"
+        "method": "POST",
+        "url": "/auth/v2/machine-session"
       },
       "response": {
         "status": 200,
-        "bodyFileName": "frankieone.json"
+
+        "jsonBody": {
+          "token": "{{randomValue length=155 type='ALPHANUMERIC'}}"
+        },
+        "transformers": ["response-template"]
       }
     }
   ]
