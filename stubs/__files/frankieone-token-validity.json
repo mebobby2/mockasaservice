@@ -1,0 +1,115 @@
+{
+  "features": {
+    "biometrics": { "refreshResults": true },
+    "driversLicenceCardNumberRequired": true,
+    "qldDlCardNumberRequired": true,
+    "vicDlCardNumberRequired": true
+  },
+  "timezone": "Australia/Sydney",
+  "mkyc_rules": {
+    "countries": {
+      "AUS": {
+        "primary_nonphotographic": {
+          "points": 70,
+          "types": ["BIRTH_CERT", "CITIZENSHIP"]
+        },
+        "primary_photographic": {
+          "points": 100,
+          "types": ["DRIVERS_LICENCE", "PASSPORT"]
+        },
+        "secondary": {
+          "points": 30,
+          "types": [
+            "VISA",
+            "IMMIGRATION",
+            "NATIONAL_HEALTH_ID",
+            "NAME_CHANGE",
+            "MARRIAGE_CERT"
+          ]
+        }
+      },
+      "default": {
+        "primary_nonphotographic": { "points": 70 },
+        "primary_photographic": { "points": 100, "types": ["PASSPORT"] },
+        "secondary": { "points": 30 }
+      }
+    },
+    "max_documents": 2,
+    "passing_combinations": [
+      { "primary_photographic": 1 },
+      { "primary_nonphotographic": 2 },
+      { "primary_nonphotographic": 1, "secondary": 1 }
+    ],
+    "passing_score": 100
+  },
+  "profiles": {
+    "default": {
+      "above18": "profile",
+      "aml_media_only": "profile",
+      "aml_only": "profile",
+      "auto": "profile",
+      "beneficiary": "pep",
+      "customer": "profile",
+      "default": "profile",
+      "gov_id": "profile",
+      "gov_id_media": "profile",
+      "international": "profile",
+      "international_media": "profile",
+      "none": "two_plus,id,pep",
+      "organisation": "profile",
+      "safe_harbour": "profile",
+      "safe_harbour_id": "profile",
+      "safe_harbour_id_media": "profile",
+      "safe_harbour_media": "profile",
+      "safe_harbour_plus": "profile",
+      "safe_harbour_plus_media": "profile",
+      "under18": "profile"
+    },
+    "default_profile": "auto",
+    "profile_options": [
+      { "label": "Automatic Selection", "value": "auto" },
+      { "label": "Default", "value": "default" },
+      { "label": "Organisation", "value": "organisation" },
+      { "label": "Gov ID", "value": "gov_id" },
+      { "label": "Standard Safe harbour", "value": "safe_harbour" },
+      { "label": "Safe Harbour & ID", "value": "safe_harbour_id" },
+      { "label": "Safe Harbour, ID & Address", "value": "safe_harbour_plus" },
+      { "label": "International", "value": "international" },
+      { "label": "Gov ID & Media", "value": "gov_id_media" },
+      {
+        "label": "Standard Safe harbour & Media",
+        "value": "safe_harbour_media"
+      },
+      { "label": "Safe Harbour, ID & Media", "value": "safe_harbour_id_media" },
+      {
+        "label": "Safe Harbour, ID, Address & Media",
+        "value": "safe_harbour_plus_media"
+      },
+      { "label": "International & Media", "value": "international_media" },
+      { "label": "Standard AML only", "value": "aml_only" },
+      { "label": "Enhanced AML only", "value": "aml_media_only" },
+      { "label": "Biometrics Only", "value": "idv_only" },
+      { "label": "Beneficiary", "value": "beneficiary" },
+      { "label": "Gov ID + Duplicate Checks", "value": "profileAdup" },
+      { "label": "No Profile - Std Checks", "value": "none" }
+    ],
+    "profile_options_for_business": [
+      { "label": "Company PEP", "value": "organisation" }
+    ]
+  },
+  "security": { "max_login_attempts": 5 },
+  "messages": {
+    "check.issue.credit_header": "<p>The submitted customer details didn’t match the records held on file by one or all of the credit reporting agencies we checked (Equifax, and/or Experian). Don’t worry, this process didn’t leave any mark on their credit history.</p><p>As per the AML/CTF Act, you are required to notify the customer that their information didn’t match the details held on file by Experian and/or Equifax. Please follow the notification procedure as per your company’s policy guidelines.</p>"
+  },
+  "organisation": {
+    "id": 264,
+    "parentId": null,
+    "customerId": "956cde1c-80fe-eb16-3d76-18c4ffc38cf2",
+    "customerChildId": null,
+    "name": "Harmoney",
+    "nickName": "hmoney",
+    "isRoot": false,
+    "timezone": "Australia/Melbourne"
+  },
+  "sessionId": "b92adde6-174e-49c1-a1ee-6ff5e2b2cbc0"
+}

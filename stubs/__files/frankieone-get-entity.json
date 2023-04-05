@@ -1,0 +1,161 @@
+{
+  "applicant": {
+    "entityId": "{{substring request.url 20}}",
+    "customerReference": "fd422d14-4f35-4fcb-8213-7fa986d3718c",
+    "name": {
+      "givenName": "Mocked",
+      "middleName": "passall",
+      "familyName": "Person",
+      "displayName": null
+    },
+    "dateOfBirth": "1986-01-23",
+    "gender": null,
+    "extraData": {
+      "kyc.method": "electronic",
+      "check_type.alias": "auto",
+      "age_group": "over18",
+      "customer_reference": "fd422d14-4f35-4fcb-8213-7fa986d3718c",
+      "consent.general": "true",
+      "consent.docs": "true",
+      "consent.creditheader": "true"
+    },
+    "phoneNumber": { "documentId": null, "idNumber": null },
+    "addresses": [
+      {
+        "buildingName": null,
+        "postalCode": "2019",
+        "state": null,
+        "streetNumber": "35",
+        "streetType": null,
+        "suburb": "Somewhere",
+        "town": "Sydney",
+        "unitNumber": "2",
+        "addressType": "RESIDENTIAL1",
+        "country": "AUD",
+        "addressId": "5186305f-35fa-ddfc-9c7c-16cf349927ad",
+        "data": {},
+        "isAddedByCustomer": false,
+        "streetName": "Some Street",
+        "longForm": "2/35 Some Street, Somewhere, Sydney 2019, Australia"
+      }
+    ],
+    "email": { "documentId": null, "idNumber": null },
+    "profile": {
+      "profileType": "safe_harbour_id",
+      "kycMethod": "electronic",
+      "countryAlpha3": "nzl",
+      "dob": "1986-01-23",
+      "checkTypes": ["profile"]
+    },
+    "assignee": null,
+    "consents": ["general", "docs", "creditheader"],
+    "blocklistAttributes": null,
+    "originalUboDetails": {
+      "name": {
+        "givenName": null,
+        "middleName": null,
+        "familyName": null,
+        "displayName": null
+      },
+      "dateOfBirth": null,
+      "isDobAddedByCustomer": false,
+      "isNameAddedByCustomer": false,
+      "addresses": []
+    }
+  },
+  "businessInfo": null,
+  "documents": [
+    {
+      "dateOfBirth": null,
+      "idSubType": null,
+      "docScan": [],
+      "scans": [],
+      "documentId": "54ed91e0-5a50-f07d-6674-d4c04d71696a",
+      "verified": { "electronic": null, "manual": null },
+      "region": "NT",
+      "country": "AUS",
+      "idNumber": "23423432",
+      "gender": null,
+      "extraData": {
+        "widget-index": null,
+        "digital_licence": null,
+        "document_number": "23423423"
+      },
+      "validation": {
+        "manual": { "isValid": null },
+        "electronic": { "validationReport": null, "isValid": null }
+      },
+      "idType": "DRIVERS_LICENCE",
+      "idExpiry": "0001-01-01",
+      "ocrResult": {}
+    }
+  ],
+  "checkSummary": {
+    "checkTypes": ["blacklist", "two_plus", "id", "pep", "idvalidate"],
+    "checkDate": "0001-01-01T00:00:00.000Z",
+    "personalChecks": {
+      "name": null,
+      "dateOfBirth": null,
+      "phoneNumber": null,
+      "email": null,
+      "chineseName": null,
+      "addresses": { "5186305f-35fa-ddfc-9c7c-16cf349927ad": null }
+    },
+    "status": { "type": "unchecked", "label": "Unchecked", "key": "UNCHECKED" },
+    "blocklistPotentialMatches": [],
+    "duplicatePotentialMatches": [],
+    "duplicateBlocklistMatches": [],
+    "risk": { "level": null, "class": "HIGH" },
+    "alertList": [],
+    "checkCounts": {
+      "name": null,
+      "address": { "5186305f-35fa-ddfc-9c7c-16cf349927ad": [] },
+      "document": {},
+      "dob": null
+    },
+    "kycMethod": "electronic",
+    "issues": {
+      "creditHeader": false,
+      "MANUAL_BLOCKLIST": false,
+      "DUPLICATE_RESOLVED": false,
+      "BLOCKLIST_ATTRIBUTE": null,
+      "BLOCKLIST_BY": null,
+      "BLOCKLIST_AT": null,
+      "MANUAL_WATCHLIST": null
+    },
+    "checkResults": [
+      {
+        "result": { "key": "", "type": "UNCHECKED", "label": "" },
+        "type": "blacklist",
+        "issues": [{ "code": "NO_RESULTS", "description": "No results" }]
+      },
+      {
+        "result": { "key": "", "type": "UNCHECKED", "label": "" },
+        "type": "two_plus",
+        "issues": [{ "code": "NO_RESULTS", "description": "No results" }]
+      },
+      {
+        "result": { "key": "", "type": "UNCHECKED", "label": "" },
+        "type": "id",
+        "issues": [{ "code": "NO_RESULTS", "description": "No results" }]
+      },
+      {
+        "result": { "key": "", "type": "UNCHECKED", "label": "" },
+        "type": "pep",
+        "issues": [
+          {
+            "code": "BLOCKED_BY_OTHER_FAIL",
+            "description": "Failed KYC, therefore not running AML checks"
+          }
+        ]
+      },
+      {
+        "result": { "key": "", "type": "UNCHECKED", "label": "" },
+        "type": "idvalidate",
+        "issues": [{ "code": "NO_RESULTS", "description": "No results" }]
+      }
+    ],
+    "rulesetsMatches": []
+  },
+  "supportingDocuments": []
+}

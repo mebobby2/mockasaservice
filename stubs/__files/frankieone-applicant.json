@@ -1,0 +1,12 @@
+{
+  "message": "There was an issue fetching this applicant's data.",
+  "sessionId": "b92adde6-174e-49c1-a1ee-6ff5e2b2cbc0",
+  "BFFRequestId": "8873651f-39bc-437f-bc2e-a1ce8e4cf7b4",
+  "CORERequestId": "not found",
+  "responseData": "not found",
+  "error": {
+    "toString": "[object Object]",
+    "message": "Applicant details not found",
+    "httpStatusCode": 500
+  }
+}

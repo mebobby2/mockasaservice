@@ -1,0 +1,6 @@
+[
+  {
+    "label": "{{request.query.searchTerm }}, Sydney, Australia",
+    "value": "google:ChIJmUWJz99MDW0RGLFUf54mnBE"
+  }
+]

@@ -3,11 +3,10 @@
     {
       "request": {
         "method": "POST",
-        "url": "/auth/v2/machine-session"
+        "url": "/compliance/v1.2/auth/v2/machine-session"
       },
       "response": {
         "status": 200,
-
         "jsonBody": {
           "token": "{{randomValue length=155 type='ALPHANUMERIC'}}"
         },

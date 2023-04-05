@@ -1,0 +1,113 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "OPTIONS",
+        "url": "/data/v2/token-validity"
+      },
+      "response": {
+        "status": 204
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/data/v2/token-validity"
+      },
+      "response": {
+        "status": 200,
+        "bodyFileName": "frankieone-token-validity.json"
+      }
+    },
+    {
+      "request": {
+        "method": "OPTIONS",
+        "urlPattern": "/data/v2/applicant.*"
+      },
+      "response": {
+        "status": 204
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "urlPattern": "/data/v2/applicant.*"
+      },
+      "response": {
+        "status": 404,
+        "bodyFileName": "frankieone-token-validity.json"
+      }
+    },
+    {
+      "request": {
+        "method": "OPTIONS",
+        "url": "/data/v1/events"
+      },
+      "response": {
+        "status": 204
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "url": "/data/v1/events"
+      },
+      "response": {
+        "status": 204
+      }
+    },
+    {
+      "request": {
+        "method": "OPTIONS",
+        "urlPattern": "/data/v1/address/search.*"
+      },
+      "response": {
+        "status": 204
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "urlPattern": "/data/v1/address/search.*"
+      },
+      "response": {
+        "status": 200,
+        "bodyFileName": "frankieone-address-search.json"
+      }
+    },
+    {
+      "request": {
+        "method": "OPTIONS",
+        "urlPattern": "/data/v2/applicants.*"
+      },
+      "response": {
+        "status": 204
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "urlPattern": "/data/v2/applicants.*"
+      },
+      "response": {
+        "status": 201,
+        "jsonBody": {
+          "entityId": "{{randomValue type='UUID'}}",
+          "requestId": "{{randomValue length=26 type='ALPHANUMERIC'}}"
+        },
+        "transformers": ["response-template"]
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "urlPattern": "/data/v2/applicants/.*"
+      },
+      "response": {
+        "status": 200,
+        "bodyFileName": "frankieone-get-entity.json"
+
+      }
+    }
+  ]
+}
