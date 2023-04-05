@@ -14,7 +14,7 @@ Request
 Response
 {"entityId":"bab3060b-229e-e1db-1bf8-24225296ea47","detailLevel":"full","creditHeaderIssueMessage":"<p>The submitted customer details didn’t match the records held on file by one or all of the credit reporting agencies we checked (Equifax, and/or Experian). Don’t worry, this process didn’t leave any mark on their credit history.</p><p>As per the AML/CTF Act, you are required to notify the customer that their information didn’t match the details held on file by Experian and/or Equifax. Please follow the notification procedure as per your company’s policy guidelines.</p>","serviceDisplayableError":false}
 
-Note above: depending on id to checks call, we should return fail or success verification to callback
+Note above: depending on id to checks call, we should return fail or success verification to callbakc
 
 Call webhook
 {

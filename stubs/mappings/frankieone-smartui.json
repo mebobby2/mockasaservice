@@ -127,6 +127,16 @@
         "status": 200,
         "bodyFileName": "frankieone-get-entity.json"
       }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "urlPattern": "/data/v1/applicants/.*/checks"
+      },
+      "response": {
+        "status": 201,
+        "bodyFileName": "frankieone-create-check.json"
+      }
     }
   ]
 }

@@ -1,0 +1,6 @@
+{
+  "entityId": "{{substring request.url 20 56}}",
+  "detailLevel": "full",
+  "creditHeaderIssueMessage": "<p>The submitted customer details didn’t match the records held on file by one or all of the credit reporting agencies we checked (Equifax, and/or Experian). Don’t worry, this process didn’t leave any mark on their credit history.</p><p>As per the AML/CTF Act, you are required to notify the customer that their information didn’t match the details held on file by Experian and/or Equifax. Please follow the notification procedure as per your company’s policy guidelines.</p>",
+  "serviceDisplayableError": false
+}
