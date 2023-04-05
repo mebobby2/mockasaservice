@@ -31,11 +31,11 @@
     {
       "request": {
         "method": "GET",
-        "urlPattern": "/data/v2/applicant.*"
+        "urlPattern": "/data/v2/applicant/\\?reference=.*"
       },
       "response": {
         "status": 404,
-        "bodyFileName": "frankieone-token-validity.json"
+        "bodyFileName": "frankieone-applicant-not-found.json"
       }
     },
     {
