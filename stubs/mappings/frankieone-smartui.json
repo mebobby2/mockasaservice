@@ -87,12 +87,32 @@
     {
       "request": {
         "method": "POST",
-        "urlPattern": "/data/v2/applicants.*"
+        "urlPattern": "/data/v2/applicants.*",
+        "bodyPatterns": [{
+          "matchesJsonPath": "$.applicant.name[?(@.middleName == 'passall')]"
+        }]
       },
       "response": {
         "status": 201,
         "jsonBody": {
-          "entityId": "{{randomValue type='UUID'}}",
+          "entityId": "bab3060b-229e-e1db-1bf8-24225296ea47",
+          "requestId": "{{randomValue length=26 type='ALPHANUMERIC'}}"
+        },
+        "transformers": ["response-template"]
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "urlPattern": "/data/v2/applicants.*",
+        "bodyPatterns": [{
+          "matchesJsonPath": "$.applicant.name[?(@.middleName != 'passall')]"
+        }]
+      },
+      "response": {
+        "status": 201,
+        "jsonBody": {
+          "entityId": "5186305f-35fa-ddfc-9c7c-16cf349927ad",
           "requestId": "{{randomValue length=26 type='ALPHANUMERIC'}}"
         },
         "transformers": ["response-template"]
@@ -106,7 +126,6 @@
       "response": {
         "status": 200,
         "bodyFileName": "frankieone-get-entity.json"
-
       }
     }
   ]
